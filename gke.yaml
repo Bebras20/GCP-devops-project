@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gcp-devops-gke
+  labels:
+    app: flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+      - name: simple_webapp
+        image: gcr.io/gke-devops-385114/simple_webapp:latest
+        ports:
+        - containerPort: 5000
+        env:
+          - name: PORT
+            value: "5000"
