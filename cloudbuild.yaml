@@ -8,9 +8,11 @@ steps:
   #push the container image 
 - name: 'gcr.io/cloud-builders/gke-deploy'
   args: 
+- name: 'gcr.io/cloud-builders/gke-deploy'
+  args:
   - run
-  - --filename=./gke.yaml
-    --image=gcr.io/$PROJECT_ID/simple_webapp
-    --location=us-central1-c
-    --cluster=cluster-1
-    --namespace=gcp-devops-prod
+  - --filename=gke.yaml
+  - --image=gcr.io/$PROJECT_ID/simple_webapp
+  - --location=us-central1-c
+  - --cluster=cluster-1
+  - --namespace=gcp-devops-prod
