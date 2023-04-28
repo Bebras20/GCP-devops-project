@@ -1,6 +1,6 @@
 steps:
 - name: 'docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/GCP-DEVOPS-project', '.']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/simple_webapp', '.']
 
 images:
 - gcr.io/$PROJECT_ID/simple_webapp
