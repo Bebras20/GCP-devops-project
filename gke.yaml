@@ -15,7 +15,7 @@ spec:
         app: flask
     spec:
       containers:
-      - name: simple_webapp
+      - name: simple-webapp
         image: gcr.io/gke-devops-385114/simple_webapp:latest
         ports:
         - containerPort: 5000
